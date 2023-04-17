@@ -1,10 +1,15 @@
 // import { Fragment } from "react";
 // import { MouseEvent } from "react";
-
 import { useState } from "react";
 
-function ListGroup() {
-    let items = ["Manila", "Paranaque", "Las Pinas", "Muntinlupa", "Taguig"];
+//{items: [], heading: string}
+interface Props {
+    items: string[];
+    heading: string;
+}
+
+function ListGroup({ items, heading }: Props) {
+    // let items = ["Manila", "Paranaque", "Las Pinas", "Muntinlupa", "Taguig"];
     // items = [];
     // let selectedIndex = 0;
 
@@ -26,7 +31,7 @@ function ListGroup() {
     return (
         //Fragment for no div in DOM, div has DOM, <> for Fragment in react
         <>
-            <h1>List</h1>
+            <h1>{heading}</h1>
             {items.length === 0 && <p>No Item Found</p>}
             <ul className="list-group">
                 {items.map((item, index) => (
