@@ -6,9 +6,10 @@ import { useState } from "react";
 interface Props {
     items: string[];
     heading: string;
+    onSelectItem: (item: string) => void;
 }
 
-function ListGroup({ items, heading }: Props) {
+function ListGroup({ items, heading, onSelectItem }: Props) {
     // let items = ["Manila", "Paranaque", "Las Pinas", "Muntinlupa", "Taguig"];
     // items = [];
     // let selectedIndex = 0;
@@ -46,6 +47,7 @@ function ListGroup({ items, heading }: Props) {
                         // onClick={() => console.log(item, index)}
                         onClick={() => {
                             setSelectedIndex(index);
+                            onSelectItem(item);
                         }}
                     >
                         {item}
