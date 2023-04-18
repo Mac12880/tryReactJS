@@ -1,6 +1,7 @@
 // import ListGroup from "./components/ListGroup";
 
 import Alert from "./components/Alert";
+import Button from "./components/Button";
 
 // const handleSelectItem = (item: string) => {
 //     console.log(item);
@@ -24,8 +25,9 @@ function App() {
         <div>
             {/* <Alert /> */}
             {/* <Alert text="Hello World" /> */}
-
-            <Alert>Hello World</Alert>
+            <Button color="secondary" onClick={() => console.log("Clicked")}>
+                My Button
+            </Button>
         </div>
     );
 }
